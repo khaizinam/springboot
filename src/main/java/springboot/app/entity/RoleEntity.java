@@ -1,5 +1,4 @@
-package com.first.go.entity;
-
+package springboot.app.entity;
 import java.util.ArrayList;
 import java.util.List;
 

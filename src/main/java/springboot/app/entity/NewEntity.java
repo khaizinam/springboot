@@ -1,4 +1,4 @@
-package com.first.go.entity;
+package springboot.app.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "new")
 
-public class NewsEntity extends BaseEntity{
+public class NewEntity extends BaseEntity{
     @Column(name = "title")
     private String title;
 
@@ -25,6 +25,7 @@ public class NewsEntity extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
+    
     public CategoryEntity getCategory() {
         return category;
     }

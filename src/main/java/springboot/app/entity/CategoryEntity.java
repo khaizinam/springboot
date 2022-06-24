@@ -1,4 +1,4 @@
-package com.first.go.entity;
+package springboot.app.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,12 @@ public class CategoryEntity extends BaseEntity{
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private List<NewsEntity> news = new ArrayList<>();
-    public List<NewsEntity> getNews() {
+    private List<NewEntity> news = new ArrayList<>();
+    public List<NewEntity> getNews() {
         return news;
     }
 
-    public void setNews(List<NewsEntity> news) {
+    public void setNews(List<NewEntity> news) {
         this.news = news;
     }
 
@@ -43,3 +43,4 @@ public class CategoryEntity extends BaseEntity{
         this.name = name;
     }
 }
+

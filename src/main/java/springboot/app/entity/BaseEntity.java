@@ -1,4 +1,4 @@
-package com.first.go.entity;
+package springboot.app.entity;
 
 import java.util.Date;
 
@@ -26,39 +26,44 @@ public abstract class BaseEntity {
     @Column(name = "modifiedDate")
     private Date modifiedDate;
 
-    public Long getID(){
+    public Long getId() {
         return id;
     }
 
-    public String getCreateBy(){
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreateBy(String createdBy){
+    public void setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
     }
 
-    public Date getCreateDate(){
+    public Date getCreatedDate() {
         return createdDate;
     }
-    
-    public void setCreateDate(Date createdDate){
+
+    public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
 
-    public String getModifiedBy(){
+    public String getModifiedBy() {
         return modifiedBy;
     }
 
-    public void setModifiedBy(String modifiedBy){
+    public void setModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
-    public Date getModifiedDate(){
+    public Date getModifiedDate() {
         return modifiedDate;
     }
-    
-    public void setModifiedDate(Date modifiedDate){
+
+    public void setModifiedDate(Date modifiedDate) {
         this.modifiedDate = modifiedDate;
     }
+
 }
