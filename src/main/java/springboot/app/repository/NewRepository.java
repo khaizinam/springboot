@@ -8,4 +8,6 @@ import springboot.app.entity.NewEntity;
 public interface NewRepository extends JpaRepository<NewEntity, Long>{
 
     NewEntity findOneById(Long id);
+    void deleteById(Long id);
+
 }

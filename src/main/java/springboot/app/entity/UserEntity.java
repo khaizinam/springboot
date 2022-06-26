@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user")
 public class UserEntity extends BaseEntity{
+
     @Column(name = "userName")
     private String userName;
 

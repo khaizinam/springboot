@@ -1,5 +1,6 @@
 package springboot.app.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "new")
 
 public class NewEntity extends BaseEntity{
+
     @Column(name = "title")
     private String title;
 

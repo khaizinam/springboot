@@ -35,4 +35,10 @@ public class NewService implements INewService{
 		newEntity = newRepository.save(newEntity);
 		return newConverter.toDTO(newEntity);
 	}
+	@Override
+	public void delete(long[] ids) {
+		for(long item: ids) {
+			newRepository.deleteById(item);
+		}
+	}
 }
