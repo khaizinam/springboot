@@ -11,5 +11,6 @@ public interface INewService {
     void delete(long[] ids);
     List<NewDTO> findAll(Pageable pageable);
     List<NewDTO> findAll();
+    List<NewDTO> findByCategoryCode(String categoryCode);
     int totalItem();
 }

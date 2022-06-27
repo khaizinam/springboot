@@ -73,4 +73,18 @@ public class NewService implements INewService{
 		}
 		return results;
 	}
+	@Override
+	public List<NewDTO> findByCategoryCode(String categoryCode) {
+		List<NewDTO> results = new ArrayList<>();
+		List<NewEntity> entities = newRepository.findByCategoryCode(categoryCode);
+		CategoryEntity categoryEntity = new CategoryEntity();
+		for (NewEntity item: entities){
+			categoryEntity = categoryRepository.findOneByCode(categoryCode);
+			item.setCategory(categoryEntity);
+			NewDTO newDTO = newConverter.toDTO(item);
+			results.add(newDTO);
+		}
+		return results;
+	}
+	
 }

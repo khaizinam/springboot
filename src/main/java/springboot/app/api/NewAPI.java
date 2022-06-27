@@ -37,7 +37,6 @@ public class NewAPI {
 		}else{
 			result.setListResult(newService.findAll());
 		}
-		
         return result;
     }
 
