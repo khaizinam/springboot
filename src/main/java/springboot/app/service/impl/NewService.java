@@ -75,11 +75,10 @@ public class NewService implements INewService{
 	}
 	@Override
 	public List<NewDTO> findByCategoryCode(String categoryCode) {
-		List<NewDTO> results = new ArrayList<>();
-		List<NewEntity> entities = newRepository.findByCategoryCode(categoryCode);
-		CategoryEntity categoryEntity = new CategoryEntity();
-		for (NewEntity item: entities){
-			categoryEntity = categoryRepository.findOneByCode(categoryCode);
+		List<NewDTO> results = new ArrayList<>(); //khoi tao array DTO de trả về JSON
+		List<NewEntity> entities = newRepository.findByCategoryCode(categoryCode);//ạo list entity có chung category code
+		CategoryEntity categoryEntity = categoryRepository.findOneByCode(categoryCode);//khỏi tạo Category Entity;
+		for (NewEntity item: entities){//vong lặp mỗi entities
 			item.setCategory(categoryEntity);
 			NewDTO newDTO = newConverter.toDTO(item);
 			results.add(newDTO);
